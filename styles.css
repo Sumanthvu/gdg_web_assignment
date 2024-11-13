@@ -1,23 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    padding: 0%;
+    margin: 0%
 }
 
 .container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    width: 100%;
+    background-color: #f6a2a2;
+    padding: 0%;    
+}
+#divid{
+    display: flex;
+    justify-content: center;
 }
 
-#divid {
-    margin: 20px 0;
+#hid{
+    text-align: center;
 }
 
 #bid{
@@ -28,8 +26,64 @@ body {
     border-radius: 5px;
     background-color: #007BFF;
     color: white;
+    
 }
 
 #bid:hover {
     background-color: #0056b3;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blocks{
+    border: 3px solid black;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 50px;  
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-column: 400px 400px; 
+    gap: 20px;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#d1{
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid beige;
+}
+#d2{
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid beige;
+}
+#d3{
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid beige;
+    border-radius: 6px;
+}
+#d4{
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid beige;
+}
+#d5{
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid beige;
+}
+#d6{
+    height: 400px;
+    width: 4    00px;
+    background-color: #fff;
+    border: 1px solid beige;
 }

@@ -1,56 +1,69 @@
+    // let a = document.getElementById('bid');
+
+    // async function fetchQuotes(count) {
+    //     let quotes = [];
+    //     for (let i = 0; i < count; i++) {
+    //         try {
+    //             let response = await fetch('https://dummyjson.com/quotes/random');
+    //             let quote = await response.json();
+    //             quotes.push(quote);
+    //         } catch (error) {
+    //             console.error('Error fetching quote:', error);
+    //         }
+    //     }   
+    //     return quotes;
+    // }
+
+    // function func2(quotes) {
+    //     quotes.forEach(quote => {
+    //         console.log(quote);
+    //     });
+    // }
+
+    // function func1() {
+    //     a.addEventListener('click', async () => {
+    //         const quotes = await fetchQuotes(6);
+    //         func2(quotes);
+    //     });
+    // }
+
+    // func1();
+
+    let a=document.getElementById('bid');
+
+    async function randomquotes() {
+        let quotes=[];
+            for (let i=0;i<6;i++) {
+                try {
+                    let response=await fetch('https://dummyjson.com/quotes/random');
+                    let quote=await response.json();
+                    quotes.push(quote);
+                } catch(error) {
+                    console.error('Your Error', error);
+                }
+            }   
+        return quotes;
+        }
+
+    function func2(a) {
+        for(let i=0;i<6;i++){
+            let b=document.getElementById(`d${i+1}`);
+            if(b){
+                let x=document.createElement('p');
+                x.textContent=a[i].content;
+                b.appendChild(x);
+            }
+        }
+        console.log(a);
+     }
+     
 
 
-let a=document.getElementById('bid');
-function func1(){
-    let obj1 = {
-        1:"Brilliant",
-      2 : "Amazing",
-      3 : "Aura"
-      }
-      let obj2 = {
-          1: "Business",
-          2: "Fashion",
-          3: "Tech"
-        };
-      let obj3 = {
-        1: ".co",
-        2: "Limited",
-        3: "Hub"
-      };
-      
-      
-      
-    let x=Math.random();
-    let first,second,third;
-    {
-        if(x<0.33) 
-            first="Amazing"
-        else if(x>=0.33 && x<0.66)
-            first="Brilliant"
-        else
-            first="Aura"
+    async function func1() {
+        a.addEventListener('click',async () =>{
+            let a=await randomquotes();
+            func2(a);
+        })
     }
-    
-    let y=Math.random();
-    {
-        if(y<0.33) 
-            second="Business"
-        else if(y>=0.33 && y<0.66)
-            second="Fashion"
-        else
-            second="Tech"
-    }
-    
-    let z=Math.random();
-    {
-        if(z<0.33) 
-            third=".co"
-        else if(z>=0.33 && z<0.66)
-            third="Limited"
-        else
-            third="Hub"
-    }
-    
-    console.log(first +" "+ second + " " +  third)
-}
-a.addEventListener('click',func1);
+
+    func1();
