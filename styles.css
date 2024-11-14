@@ -14,8 +14,8 @@ body {
     align-items: center;
 }
 #divid{
-    position: relative;
-    bottom: 160px;
+    /* position: relative;
+    bottom: 160px; */
     display: flex;
     justify-content: center;
 }
@@ -74,8 +74,8 @@ body {
     grid-column: 300px 300px; 
     gap: 20px;
     font-size: larger;
-    position: relative;
-    bottom: 200px;
+    /* position: relative;
+    bottom: 200px; */
     padding: auto;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
